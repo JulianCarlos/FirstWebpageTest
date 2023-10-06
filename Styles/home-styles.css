@@ -1,0 +1,42 @@
+.home-section {
+    display: flex;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 900px;
+    background-color: aqua;
+    background-image: url(..//images/Ingame-5.png);
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadein-welcome-text {
+    from {
+        transform: translate(0px, -300px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.hometext {
+    font-size: 75px;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    background-color: rgba(255, 255, 255, 0.44);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 30px;
+
+    animation: fadein-welcome-text 1s ease-in forwards;
+}
+
+@media screen and (max-width: 1399px) {
+    .hometext {
+        font-size: 40px;
+    }
+}

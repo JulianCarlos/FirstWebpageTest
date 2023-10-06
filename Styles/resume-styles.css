@@ -1,0 +1,127 @@
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    left: 0px;
+    right: 0px;
+    margin: 125px;
+    border-radius: 25px;
+    border: rgb(54, 54, 54) solid 3px;
+}
+
+.resume-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.resume-date {
+    text-align: center;
+}
+
+.resume-section-left {
+    flex: 1;
+    border-right: 1px solid rgb(68, 68, 68);
+    margin-left: 75px;
+}
+
+.resume-section-right {
+    flex: 1;
+    border-left: 1px solid rgb(68, 68, 68);
+    margin-right: 75px;
+}
+
+.resume-section-block {
+    position: relative;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 75px;
+}
+
+@keyframes anim-block-to-center {
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.resume-section-block.block-left {
+    border: 3px solid rgb(0, 106, 148);
+    border-right: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transform: translate(-250px, 0);
+
+    animation: anim-block-to-center 0.5s ease-in forwards;
+}
+
+.resume-section-block.block-right {
+    border: 3px solid rgb(0, 106, 148);
+    border-left: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transform: translate(250px, 0);
+
+    animation: anim-block-to-center 0.5s ease-in forwards;
+}
+
+.resume-section-empty-block {
+    margin-bottom: 75px;
+    height: 350px;
+    position: relative;
+}
+
+.resume-block-title {
+    padding-top: 25px;
+    color: #00529e;
+    text-decoration: underline;
+    margin: 0%;
+}
+
+.timeline-circle {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: -20px;
+    right: -20px;
+    border: 3px solid rgb(0, 106, 148);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+@media screen and (max-width: 1399px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .resume-section-left {
+        border: none;
+        margin: 0px;
+    }
+    .resume-section-right {
+        border: none;
+        margin: 0px;
+    }
+    .resume-section-block {
+        border-radius: 30px;
+    }
+    .resume-section-block.block-left{
+        border: 3px solid rgb(0, 106, 148);
+    }
+    .resume-section-block.block-right{
+        border: 3px solid rgb(0, 106, 148);
+    }
+    .timeline-circle {
+        background-color: transparent;
+        border: none;
+    }
+    .resume-section-empty-block{
+        height: 0px;
+    }
+    .resume-section-block {
+        margin-bottom: 0px;
+    }
+    .resume-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

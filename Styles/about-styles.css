@@ -1,0 +1,144 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    margin: 125px;
+    border-radius: 25px;
+    border: rgb(54, 54, 54) solid 3px;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+@keyframes fadein-about-container {
+    from {
+        transform: translate(0px, -100px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.about-container {
+    animation: fadein-about-container 0.5s ease-in forwards;
+
+    margin-bottom: 35px;
+}
+
+.about-credentials {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.about-credential-container {
+    padding-left: 50px;
+}
+
+@keyframes fadein-about-image {
+    from {
+        transform: translate(-300px, 0px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.about-image {
+    min-width: 325px;
+    border: 3px solid #4C212A;
+    border-radius: 5px;
+    object-fit: cover;
+
+    animation: fadein-about-image 0.5s ease-in forwards;
+}
+
+.about-credentials-title {
+    margin-top: 0px;
+    color: #00529e;
+    text-align: left;
+}
+
+@keyframes fadein-about-credential-texts {
+    from {
+        transform: translate(300px, 0px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.about-credential-texts {
+    margin-bottom: 35px;
+
+    animation: fadein-about-credential-texts 0.5s ease-in forwards;
+}
+
+.credential-infos {
+    display: flex;
+    flex-direction: row;
+}
+
+.credential-info-text {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.credential-info-arrow {
+    font-size: 26px;
+    font-weight: 500px;
+    color: #00529e;
+}
+
+.credential-info-title {
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@keyframes fadein-credential-segment{
+    from {
+        transform: translate(0px, 300px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.credential-segment {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 15px;
+
+    animation: fadein-credential-segment 0.5s ease-in forwards;
+}
+
+@media screen and (max-width: 1399px) {
+    .about-credentials {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .credential-infos{
+        flex-direction: column;
+    }
+    .about-credential-container {
+        padding-left: 0px;
+    }
+    .about-credentials-title {
+        margin-top: 35px;
+    }
+}
